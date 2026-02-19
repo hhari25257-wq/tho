@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 45px;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px white; }
+            to { text-shadow: 0 0 25px yellow; }
+        }
+
+        img {
+            width: 250px;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .message {
+            margin-top: 30px;
+            font-size: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .logout {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 25px;
+            background: white;
+            color: #ff4081;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎉 Happy Birthday <span id="displayName"></span> 🎉</h1>
+
+    <!-- Add Your Photo -->
+    <img src="photo.jpg" alt="Birthday Photo">
+
+    <p>
+        May your day be filled with happiness, joy and love! 🎂💖
+    </p>
+
+    <div class="message">
+        💌 You are an amazing person.  
+        I wish you success, happiness and lots of smiles in your life.  
+        Enjoy your special day! 🎈🎁
+    </div>
+
+    <a href="login.html" class="logout">Logout</a>
+</div>
+
+<script>
+document.getElementById("displayName").innerText = localStorage.getItem("birthdayName");
+</script>
+
+</body>
+</html>
